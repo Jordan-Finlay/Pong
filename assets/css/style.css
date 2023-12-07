@@ -1,0 +1,54 @@
+body {
+    background-color: rgb(85, 107, 180);
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+}
+
+#pong {
+    width: 60%;
+    height: 60%;
+    background: #111111;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.logo {}
+
+.heading {
+    font-size: 300%;
+}
+
+.score-area {
+    margin: 5px auto;
+    width: 60%;
+    font-size: 3rem;
+}
+
+
+
+
+
+/* Media for mobile screens */
+@media (max-width: 440px) {
+    #pong {
+        width: 90%;
+        height: 60%;
+        background: #111111;
+        display: block;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .score-area {
+        margin: 5px auto;
+        width: 60%;
+        font-size: 2rem;
+    }
+}
+
