@@ -1,5 +1,10 @@
 //Global variables
 let scores = [0, 0];
+const gameBoard = document.querySelector("#gameBoard");
+const ctx = gameBoard.getContext("2d");
+const scoreText = document.querySelector("#scoreText");
+const resetBtn = document.querySelector("#resetBtn");
+
 var ball = {
     width: 20,
     height: 20,
@@ -10,9 +15,6 @@ var ball = {
     moveX: DIRECTION.IDLE,
     moveY: DIRECTION.IDLE
 };
-
-const canvas = document.getElementById("pong");
-const ctx = canvas.getContext("2d");
 
 var DIRECTION = {
     IDLE: 0,
@@ -27,7 +29,39 @@ var paddle = {
     height 100,
     x: side === 'left' ? 150 : this.canvas.width - 150,
     y: (this.canvas.height / 2) - 35,
-    score: 0,
     move: DIRECTION.IDLE,
     speed: 7
+}
+
+var aipaddle = {
+    width: 20,
+    height 100,
+    x: side === 'right' ? 150 : this.canvas.width - 150,
+    y: (this.canvas.height / 2) - 35,
+    move: DIRECTION.IDLE,
+    speed: 7
+}
+
+var Game = {
+    initialize: function () {
+
+        this.canvas.width = 1000;
+        this.canvas.height = 700;
+
+        this.canvas.style.width = (this.canvas.width / 2) + 'px';
+        this.canvas.style.height = (this.canvas.height / 2) + 'px';
+
+        this.player = Ai.new.call(this, 'left');
+        this.ai = Ai.new.call(this, 'right');
+        this.ball = Ball.new.call(this);
+
+        this.ai.speed = 5;
+        this.running = this.over = false;
+        this.turn = this.ai;
+        this.timer = this.round = 0;
+        this.color = 'black';
+
+        Pong.menu();
+        Pong.listen();
+    }
 }

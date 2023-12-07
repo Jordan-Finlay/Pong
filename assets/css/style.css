@@ -4,13 +4,14 @@ body {
     text-align: center;
 }
 
-#pong {
+#gameBoard {
     width: 60%;
     height: 60%;
     background: #111111;
     display: block;
     margin: auto;
     margin-bottom: 30px;
+    border: 5px;
 }
 
 .heading {
@@ -24,7 +25,7 @@ body {
     font-size: 300%;
 }
 
-.score-area {
+#score-area {
     margin: 5px auto;
     width: 60%;
     font-size: 3rem;
@@ -36,7 +37,7 @@ body {
 
 /* Media for mobile screens */
 @media (max-width: 440px) {
-    #pong {
+    #gameBoard {
         width: 90%;
         height: 60%;
         background: #111111;
@@ -45,7 +46,7 @@ body {
         margin-bottom: 30px;
     }
 
-    .score-area {
+    #score-area {
         margin: 5px auto;
         width: 60%;
         font-size: 2rem;
