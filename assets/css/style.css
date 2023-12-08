@@ -10,20 +10,17 @@ body {
     background: #111111;
     display: block;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border: 5px;
 }
 
-.heading {
+#heading {
     text-align: center;
     font-size: 2.5rem;
+    font-size: 300%;
 }
 
 .logo {}
-
-.heading {
-    font-size: 300%;
-}
 
 #scoreText {
     margin: 5px auto;

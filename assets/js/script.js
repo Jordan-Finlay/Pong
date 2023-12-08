@@ -31,7 +31,7 @@ let paddle1 = {
     speed: 7
 }
 
-var paddle2 = {
+let paddle2 = {
     width: 20,
     height: 100,
     x: gameWidth - 20,
@@ -75,40 +75,40 @@ var Game = {
 
 function gameStart (){
 
-}
+};
 
 function nextTick (){
 
-}
+};
 
 function clearBoard (){
 
-}
+};
 
 function drawBall() {
 
-}
+};
 
 function createBall (){
 
-}
+};
 
 function drawPaddles(){
 
-}
+};
 
 function checkCollision(){
 
-}
+};
 
 function changeDirection(){
 
-}
+};
 
 function updateScore(){
 
-}
+};
 
 function resetGame(){
 
-}
+};
