@@ -29,7 +29,7 @@ var DIRECTION = {
 
 var paddle = {
     width: 20,
-    height 100,
+    height: 100,
     x: side === 'left' ? 150 : this.canvas.width - 150,
     y: (this.canvas.height / 2) - 35,
     move: DIRECTION.IDLE,
@@ -67,4 +67,45 @@ var Game = {
         Pong.menu();
         Pong.listen();
     }
+}
+
+
+function gameStart (){
+
+}
+
+function nextTick (){
+
+}
+
+function clearBoard (){
+
+}
+
+function drawBall() {
+
+}
+
+function createBall (){
+
+}
+
+function drawPaddles(){
+
+}
+
+function checkCollision(){
+
+}
+
+function changeDirection(){
+
+}
+
+function updateScore(){
+
+}
+
+function resetGame(){
+
 }
