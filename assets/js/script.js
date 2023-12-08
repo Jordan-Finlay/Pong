@@ -17,7 +17,28 @@ let intervalID;
 let ballX = gameWidth / 2;
 let ballY = gameHeight / 2;
 let ballSpeed = 5;
+let ballXDirection = 0;
+let ballYdirection = 0;
+let player1Score = 0;
+let player2Score = 0;
 
+let paddle1 = {
+    width: 20,
+    height: 100,
+    x: 0,
+    y: 0,
+    move: DIRECTION.IDLE,
+    speed: 7
+}
+
+var paddle2 = {
+    width: 20,
+    height: 100,
+    x: gameWidth - 20,
+    y: gameHeight - 100,
+    move: DIRECTION.IDLE,
+    speed: 7
+}
 
 var DIRECTION = {
     IDLE: 0,
@@ -25,24 +46,6 @@ var DIRECTION = {
     DOWN: 2,
     LEFT: 3,
     RIGHT: 4,
-}
-
-var paddle = {
-    width: 20,
-    height: 100,
-    x: side === 'left' ? 150 : this.canvas.width - 150,
-    y: (this.canvas.height / 2) - 35,
-    move: DIRECTION.IDLE,
-    speed: 7
-}
-
-var aipaddle = {
-    width: 20,
-    height 100,
-    x: side === 'right' ? 150 : this.canvas.width - 150,
-    y: (this.canvas.height / 2) - 35,
-    move: DIRECTION.IDLE,
-    speed: 7
 }
 
 var Game = {
