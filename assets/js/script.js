@@ -1,20 +1,23 @@
 //Global variables
-let scores = [0, 0];
 const gameBoard = document.querySelector("#gameBoard");
 const ctx = gameBoard.getContext("2d");
 const scoreText = document.querySelector("#scoreText");
 const resetBtn = document.querySelector("#resetBtn");
+const gameWidth = gameBoard.width;
+const gameHeight = gameBoard.height; 
+const paddle1Color = "blue";
+const paddle2Color = "blue";
+const paddleBorder = "white";
+const paddleSpeed = 15;
+const ballRadius = 20;
+const ballColor = "white";
 
-var ball = {
-    width: 20,
-    height: 20,
-    x: canvas.width / 2,
-    y: canvas.height / 2,
-    radius: 10,
-    speed: 4,
-    moveX: DIRECTION.IDLE,
-    moveY: DIRECTION.IDLE
-};
+let scores = [0, 0];
+let intervalID;
+let ballX = gameWidth / 2;
+let ballY = gameHeight / 2;
+let ballSpeed = 5;
+
 
 var DIRECTION = {
     IDLE: 0,
