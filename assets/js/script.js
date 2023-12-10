@@ -6,7 +6,7 @@ const resetBtn = document.querySelector("#resetBtn");
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height; 
 const paddle1Color = "blue";
-const paddle2Color = "blue";
+const paddle2Color = "red";
 const paddleBorder = "white";
 const paddleSpeed = 15;
 const ballRadius = 20;
@@ -43,12 +43,21 @@ gameStart();
 drawPaddles();
 
 
-function gameStart (){
+function gameStart (){ 
+    createBall();
+    nextTick();
+
     
 };
 
 function nextTick (){
-
+    intervalID = setTimeout(() => {
+        clearBoard();
+        drawPaddles();
+        drawBall();
+        moveBall();
+        checkCollision();
+    }, 10)
 };
 
 function clearBoard (){
@@ -60,6 +69,10 @@ function drawBall() {
 };
 
 function createBall (){
+
+};
+
+function moveBall(){
 
 };
 
