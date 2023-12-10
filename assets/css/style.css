@@ -5,8 +5,8 @@ body {
 }
 
 #gameBoard {
-    width: 60%;
-    height: 60%;
+    width: 1200px;
+    height: 650px;
     background: #111111;
     display: block;
     margin: auto;

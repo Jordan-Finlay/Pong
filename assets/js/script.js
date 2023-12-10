@@ -23,58 +23,28 @@ let player1Score = 0;
 let player2Score = 0;
 
 let paddle1 = {
-    width: 20,
-    height: 100,
-    x: 0,
-    y: 0,
-    move: DIRECTION.IDLE,
+    width: 25,
+    height: 10,
+    x: 3,
+    y: 3,
     speed: 7
-}
+};
 
 let paddle2 = {
-    width: 20,
-    height: 100,
-    x: gameWidth - 20,
-    y: gameHeight - 100,
-    move: DIRECTION.IDLE,
+    width: 25,
+    height: 10,
+    x: gameWidth - 13,
+    y: gameHeight - 28,
     speed: 7
-}
+};
 
-var DIRECTION = {
-    IDLE: 0,
-    UP: 1,
-    DOWN: 2,
-    LEFT: 3,
-    RIGHT: 4,
-}
 
-var Game = {
-    initialize: function () {
-
-        this.canvas.width = 1000;
-        this.canvas.height = 700;
-
-        this.canvas.style.width = (this.canvas.width / 2) + 'px';
-        this.canvas.style.height = (this.canvas.height / 2) + 'px';
-
-        this.player = Ai.new.call(this, 'left');
-        this.ai = Ai.new.call(this, 'right');
-        this.ball = Ball.new.call(this);
-
-        this.ai.speed = 5;
-        this.running = this.over = false;
-        this.turn = this.ai;
-        this.timer = this.round = 0;
-        this.color = 'black';
-
-        Pong.menu();
-        Pong.listen();
-    }
-}
+gameStart();
+drawPaddles();
 
 
 function gameStart (){
-
+    
 };
 
 function nextTick (){
@@ -93,8 +63,19 @@ function createBall (){
 
 };
 
-function drawPaddles(){
+function drawPaddles(){ 
+    ctx.strokeStyle = paddleBorder;
 
+    //Paddle 1 properties
+    ctx.strokeRect(paddle1.x, paddle1.y, paddle1.height, paddle1.width);
+    ctx.fillStyle = paddle1Color;
+    ctx.fillRect(paddle1.x, paddle1.y, paddle1.height, paddle1.width);
+
+    //Paddle 2 properties
+    ctx.strokeRect(paddle2.x, paddle2.y, paddle2.height, paddle2.width);
+    ctx.fillStyle = paddle2Color;
+    ctx.fillRect(paddle2.x, paddle2.y, paddle2.height, paddle2.width);
+    
 };
 
 function checkCollision(){
