@@ -97,16 +97,20 @@ function changeDirection(event) {
     const paddle1Up = 87;
     const paddle1Down = 83;
 
-    switch (keyPressed){
+    switch (keyPressed) {
         case (paddle1Up):
-            paddle1.y -= paddleSpeed;
+            if (paddle1.y > 5) {
+                paddle1.y -= paddleSpeed;
+            }
             break;
         case (paddle1Down):
-            paddle1.y += paddleSpeed;
+            if (paddle1.y < 120) {
+                paddle1.y += paddleSpeed;
+            }
             break;
     }
 
-    
+
 };
 
 function updateScore() {
