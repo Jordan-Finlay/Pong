@@ -11,6 +11,7 @@ const paddleBorder = "white";
 const paddleSpeed = 20;
 const ballRadius = 20;
 const ballColor = "white";
+const boardBackground = "black";
 
 let intervalID;
 let ballX = gameWidth / 2;
@@ -56,7 +57,8 @@ function nextTick() {
 };
 
 function clearBoard() {
-
+    ctx.fillStyle = boardBackground;
+    ctx.fillRect(0, 0, gameWidth, gameHeight);
 };
 
 function drawBall() {
