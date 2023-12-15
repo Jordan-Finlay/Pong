@@ -66,6 +66,7 @@ function drawBall(ballX, ballY) {
     ctx.fillStyle = ballColor;
     ctx.strokeStyle = ballBorderColor;
     ctx.lineWidth = 2;
+    ctx.beginPath();
     ctx.arc(ballX, ballY, ballRadius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
@@ -89,7 +90,8 @@ function createBall() {
 };
 
 function moveBall() {
-
+    ballX += (ballSpeed * ballXDirection);
+    ballY += (ballSpeed * ballYDirection);
 };
 
 function drawPaddles() {
