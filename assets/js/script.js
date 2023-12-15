@@ -11,12 +11,13 @@ const paddleBorder = "white";
 const paddleSpeed = 20;
 const ballRadius = 3;
 const ballColor = "white";
+const ballBorderColor = "white";
 const boardBackground = "black";
 
 let intervalID;
 let ballX = gameWidth / 2;
 let ballY = gameHeight / 2;
-let ballSpeed = 5;
+let ballSpeed = 1;
 let ballXDirection = 0;
 let ballYDirection = 0;
 let player1Score = 0;
@@ -63,7 +64,7 @@ function clearBoard() {
 
 function drawBall(ballX, ballY) {
     ctx.fillStyle = ballColor;
-    ctx.strokeStyle = ballRadius;
+    ctx.strokeStyle = ballBorderColor;
     ctx.lineWidth = 2;
     ctx.arc(ballX, ballY, ballRadius, 0, 2 * Math.PI);
     ctx.fill();
@@ -71,6 +72,20 @@ function drawBall(ballX, ballY) {
 };
 
 function createBall() {
+    ballSpeed = 1;
+    if (Math.round(Math.random()) == 1){
+        ballXDirection = 1;
+    } else {
+        ballXDirection = -1;
+    }
+    if (Math.round(Math.random()) == 1) {
+        ballYDirection = 1;
+    } else {
+        ballYDirection = -1;
+    }
+    ballX = gameWidth / 2;
+    ballY = gameHeight / 2;
+    drawBall(ballX, ballY);
 };
 
 function moveBall() {
