@@ -79,7 +79,7 @@ function drawBall(ballX, ballY) {
 //Math round to randomise if the ball goes right of left
 function createBall() {
     ballSpeed = 1;
-    if (Math.round(Math.random()) == 1){
+    if (Math.round(Math.random()) == 1) {
         ballXDirection = 1;
     } else {
         ballXDirection = -1;
@@ -116,16 +116,16 @@ function drawPaddles() {
 
 function checkCollision() {
     //ballcollision for top
-    if(ballY <= 0 + ballRadius){
+    if (ballY <= 0 + ballRadius) {
         ballYDirection *= -1;
     }
     //ballcollision for bottom
-    if(ballY >= gameHeight - ballRadius){
+    if (ballY >= gameHeight - ballRadius) {
         ballYDirection *= -1;
     }
     //reset score/game when ball passes left wall
-    if(ballX <= 0){
-        player2Score+=1;
+    if (ballX <= 0) {
+        player2Score += 1;
         updateScore();
         createBall();
         return;
@@ -137,24 +137,56 @@ function checkCollision() {
         createBall();
         return;
     }
+
+    //ballcollision for paddles
+    if (ballX <= (paddle1.x + paddle1.height + ballRadius)) {
+        if (ballY > paddle1.y && ballY < paddle1.y + paddle1.width) {
+            ballX = (paddle1.x + paddle1.height) + ballRadius;
+            ballXDirection *= -1;
+            ballSpeed += 0.1;
+        }
+    }
+    if (ballX >= (paddle2.x - ballRadius)) {
+        if (ballY > paddle2.y && ballY < paddle2.y + paddle2.width) {
+            ballX = (paddle2.x - ballRadius);
+            ballXDirection *= -1;
+            ballSpeed += 0.1;
+        }
+    }
 };
 
 function changeDirection(event) {
     const keyPressed = event.keyCode;
     const paddle1Up = 87;
     const paddle1Down = 83;
+    const paddle2Up = 38;
+    const paddle2Down = 40;
 
-    //Paddle up
+    //Paddle 1 up
     switch (keyPressed) {
         case (paddle1Up):
             if (paddle1.y > 5) {
                 paddle1.y -= paddleSpeed;
             }
             break;
-        //Paddle Down
+        //Paddle 1 Down
         case (paddle1Down):
             if (paddle1.y < 120) {
                 paddle1.y += paddleSpeed;
+            }
+            break;
+    }
+    //Paddle 1 up
+    switch (keyPressed) {
+        case (paddle2Up):
+            if (paddle2.y > 5) {
+                paddle2.y -= paddleSpeed;
+            }
+            break;
+        //Paddle 2 Down
+        case (paddle2Down):
+            if (paddle2.y < 120) {
+                paddle2.y += paddleSpeed;
             }
             break;
     }
