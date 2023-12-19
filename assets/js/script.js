@@ -23,6 +23,7 @@ let ballYDirection = 0;
 let player1Score = 0;
 let player2Score = 0;
 
+//Player 1 paddle
 let paddle1 = {
     width: 25,
     height: 10,
@@ -30,6 +31,7 @@ let paddle1 = {
     y: 3
 };
 
+//AI paddle
 let paddle2 = {
     width: 25,
     height: 10,
@@ -37,6 +39,7 @@ let paddle2 = {
     y: gameHeight - 28
 };
 
+//Listener for movement
 window.addEventListener("keydown", changeDirection);
 
 gameStart();
@@ -110,7 +113,12 @@ function drawPaddles() {
 };
 
 function checkCollision() {
-
+    if(ballY <= 0 + ballRadius){
+        ballYDirection *= -1;
+    }
+    if(ballY >= gameHeight - ballRadius){
+        ballYDirection *= -1;
+    }
 };
 
 function changeDirection(event) {
