@@ -75,6 +75,8 @@ function drawBall(ballX, ballY) {
     ctx.stroke();
 };
 
+
+//Math round to randomise if the ball goes right of left
 function createBall() {
     ballSpeed = 1;
     if (Math.round(Math.random()) == 1){
@@ -113,11 +115,27 @@ function drawPaddles() {
 };
 
 function checkCollision() {
+    //ballcollision for top
     if(ballY <= 0 + ballRadius){
         ballYDirection *= -1;
     }
+    //ballcollision for bottom
     if(ballY >= gameHeight - ballRadius){
         ballYDirection *= -1;
+    }
+    //reset score/game when ball passes left wall
+    if(ballX <= 0){
+        player2Score+=1;
+        updateScore();
+        createBall();
+        return;
+    }
+    //reset score/game when ball passes right wall
+    if (ballX >= gameWidth) {
+        player1Score += 1;
+        updateScore();
+        createBall();
+        return;
     }
 };
 
