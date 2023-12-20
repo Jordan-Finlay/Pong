@@ -18,11 +18,17 @@ body {
     border: 5px;
 }
 
+.none {
+    display: none !important;
+}
+
 #heading {
     text-align: center;
     font-size: 2.5rem;
     font-size: 300%;
 }
+
+#rules {}
 
 .logo {}
 
@@ -56,4 +62,3 @@ body {
         font-size: 2rem;
     }
 }
-

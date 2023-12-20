@@ -42,8 +42,6 @@ let paddle2 = {
 //Listener for paddle movement
 window.addEventListener("keydown", changeDirection);
 
-gameStart();
-
 function gameStart() {
     createBall();
     nextTick();
@@ -206,3 +204,19 @@ function updateScore() {
 function resetGame() {
 
 };
+
+
+// gameBoard.classList.remove("none");
+
+function runGame() {
+    gameBoard.classList.remove("none");
+    gameStart();
+};
+
+
+addEventListener("DOMContentLoaded", (event) => {
+    const button = document.getElementById("runGame");
+    button.addEventListener("click", runGame);
+    
+});
+
