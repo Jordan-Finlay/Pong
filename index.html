@@ -17,21 +17,37 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/icons8-pong-60.png"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/3b20d96fa9.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Pong</title>
   </head>
   <body>
-    <h1 id="heading"><img class="logo" src="" alt="" />PONG</h1>
-    <div id="gameContainer" >
-    
-      <canvas id="gameBoard"></canvas>
+    <main>
+      <h1 id="heading">
+        <img class="logo" src="" alt="" /><i
+          class="fa-solid fa-table-tennis-paddle-ball"
+        ></i
+        >PONG
+      </h1>
+      <div id="gameContainer">
+        <canvas id="gameBoard"></canvas>
 
-      <div id="scoreText">0 : 0</div>
+        <div id="scoreText">0 : 0</div>
 
-      <button id="resetBtn">Reset</button>
-      
-    </div>
-
+        <button id="resetBtn">Reset</button>
+      </div>
+    </main>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

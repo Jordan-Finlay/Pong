@@ -61,6 +61,7 @@ function nextTick() {
     }, 10);
 };
 
+
 //General background for gameboard
 function clearBoard() {
     ctx.fillStyle = boardBackground;
@@ -205,4 +206,3 @@ function updateScore() {
 function resetGame() {
 
 };
-

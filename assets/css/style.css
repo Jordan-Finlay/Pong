@@ -4,6 +4,10 @@ body {
     text-align: center;
 }
 
+.fa-solid {
+    margin-right: 15px;
+}
+
 #gameBoard {
     width: 1200px;
     height: 650px;
@@ -34,9 +38,6 @@ body {
     border-radius: 10px;
     font-size: 20px;
 }
-
-
-
 
 /* Media for mobile screens */
 @media (max-width: 440px) {
