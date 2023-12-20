@@ -39,7 +39,7 @@ let paddle2 = {
     y: gameHeight - 28
 };
 
-//Listener for movement
+//Listener for paddle movement
 window.addEventListener("keydown", changeDirection);
 
 gameStart();
@@ -49,6 +49,7 @@ function gameStart() {
     nextTick();
 };
 
+//Main loop
 function nextTick() {
     intervalID = setTimeout(() => {
         clearBoard();
@@ -60,11 +61,13 @@ function nextTick() {
     }, 10);
 };
 
+//General background for gameboard
 function clearBoard() {
     ctx.fillStyle = boardBackground;
     ctx.fillRect(0, 0, gameWidth, gameHeight);
 };
 
+//Style for the ball
 function drawBall(ballX, ballY) {
     ctx.fillStyle = ballColor;
     ctx.strokeStyle = ballBorderColor;
@@ -75,8 +78,7 @@ function drawBall(ballX, ballY) {
     ctx.stroke();
 };
 
-
-//Math round to randomise if the ball goes right of left
+//Math round to randomise if the ball goes right of left when spawned
 function createBall() {
     ballSpeed = 1;
     if (Math.round(Math.random()) == 1) {
@@ -99,6 +101,7 @@ function moveBall() {
     ballY += (ballSpeed * ballYDirection);
 };
 
+//Display for paddles
 function drawPaddles() {
     ctx.strokeStyle = paddleBorder;
 
@@ -114,6 +117,7 @@ function drawPaddles() {
 
 };
 
+//To make sure ball bounces off walls/paddles
 function checkCollision() {
     //ballcollision for top
     if (ballY <= 0 + ballRadius) {
@@ -155,6 +159,7 @@ function checkCollision() {
     }
 };
 
+//To move paddles up and down
 function changeDirection(event) {
     const keyPressed = event.keyCode;
     const paddle1Up = 87;
@@ -176,7 +181,7 @@ function changeDirection(event) {
             }
             break;
     }
-    //Paddle 1 up
+    //Paddle 2 up
     switch (keyPressed) {
         case (paddle2Up):
             if (paddle2.y > 5) {
@@ -192,10 +197,12 @@ function changeDirection(event) {
     }
 };
 
+//Update score board
 function updateScore() {
-
+    scoreText.textContent = `${player1Score} : ${player2Score}`;
 };
 
 function resetGame() {
 
 };
+
