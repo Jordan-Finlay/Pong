@@ -17,7 +17,7 @@ const boardBackground = "black";
 let intervalID;
 let ballX = gameWidth / 2;
 let ballY = gameHeight / 2;
-let ballSpeed = 1;
+let ballSpeed = 0;
 let ballXDirection = 0;
 let ballYDirection = 0;
 let player1Score = 0;
@@ -86,7 +86,6 @@ function drawBall(ballX, ballY) {
 
 //Math round to randomise if the ball goes right of left when spawned
 function createBall() {
-    ballSpeed = 1;
     if (Math.round(Math.random()) == 1) {
         ballXDirection = 1;
     } else {
@@ -206,6 +205,7 @@ function changeDirection(event) {
 //Update score board
 function updateScore() {
     scoreText.textContent = `${player1Score} : ${player2Score}`;
+    ballStart();
 };
 
 //Reset game
@@ -234,18 +234,21 @@ function resetGame() {
     gameStart();
 };
 
-
-// gameBoard.classList.remove("none");
-
+//Removes rules page. Adds canvas to be displayed
 function runGame() {
-    gameBoard.classList.remove("none");
+    mainGame.classList.remove("none");
+    rules.classList.add("none");
+    setTimeout(ballStart, 2500); //Timer to keep the ball in place after starting game
     gameStart();
 };
 
-
+//Listener for when you click to start the game 
 addEventListener("DOMContentLoaded", (event) => {
-    let button = document.getElementById("runGame");
+    const button = document.getElementById("runGame");
     button.addEventListener("click", runGame);
-
 });
 
+//Added to start the ball movement after the setTimeout when running game
+function ballStart() {
+    ballSpeed = 1;
+};
