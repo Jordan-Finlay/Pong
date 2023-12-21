@@ -52,14 +52,18 @@ function gameStart() {
 
 //Main loop
 function nextTick() {
-    intervalID = setTimeout(() => {
-        clearBoard();
-        drawPaddles();
-        drawBall(ballX, ballY);
-        moveBall();
-        checkCollision();
-        nextTick();
-    }, 10);
+    try {
+        intervalID = setTimeout(() => {
+            clearBoard();
+            drawPaddles();
+            drawBall(ballX, ballY);
+            moveBall();
+            checkCollision();
+            nextTick();
+        }, 10);
+    } catch (err) {
+        alert(err.message);
+    }
 };
 
 
@@ -204,6 +208,7 @@ function updateScore() {
     scoreText.textContent = `${player1Score} : ${player2Score}`;
 };
 
+//Reset game
 function resetGame() {
     player1Score = 0;
     player2Score = 0;
