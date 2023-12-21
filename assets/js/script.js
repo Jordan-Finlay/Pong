@@ -224,14 +224,9 @@ function resetGame() {
         x: gameWidth - 13,
         y: gameHeight - 28
     };
-    ballSpeed = 1;
-    ballX = 0;
-    ballY = 0;
-    ballXDirection = 0;
-    ballYDirection = 0;
     updateScore();
     clearInterval(intervalID);
-    gameStart();
+    runGame();
 };
 
 //Removes rules page. Adds canvas to be displayed
@@ -239,6 +234,7 @@ function runGame() {
     mainGame.classList.remove("none");
     rules.classList.add("none");
     setTimeout(ballStart, 2500); //Timer to keep the ball in place after starting game
+    clearInterval(intervalID);
     gameStart();
 };
 
