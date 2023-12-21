@@ -42,6 +42,9 @@ let paddle2 = {
 //Listener for paddle movement
 window.addEventListener("keydown", changeDirection);
 
+//Listener for reset button
+resetBtn.addEventListener("click", resetGame);
+
 function gameStart() {
     createBall();
     nextTick();
@@ -202,7 +205,28 @@ function updateScore() {
 };
 
 function resetGame() {
-
+    player1Score = 0;
+    player2Score = 0;
+    paddle1 = {
+        width: 25,
+        height: 10,
+        x: 3,
+        y: 3
+    };
+    paddle2 = {
+        width: 25,
+        height: 10,
+        x: gameWidth - 13,
+        y: gameHeight - 28
+    };
+    ballSpeed = 1;
+    ballX = 0;
+    ballY = 0;
+    ballXDirection = 0;
+    ballYDirection = 0;
+    updateScore();
+    clearInterval(intervalID);
+    gameStart();
 };
 
 
@@ -215,8 +239,8 @@ function runGame() {
 
 
 addEventListener("DOMContentLoaded", (event) => {
-    const button = document.getElementById("runGame");
+    let button = document.getElementById("runGame");
     button.addEventListener("click", runGame);
-    
+
 });
 
