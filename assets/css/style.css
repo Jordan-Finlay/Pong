@@ -62,3 +62,39 @@ body {
         font-size: 2rem;
     }
 }
+
+/* Media for tablet screen */
+@media (max-width: 768px) {
+    #gameBoard {
+        width: 90%;
+        height: 60%;
+        background: #111111;
+        display: block;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    #scoreText {
+        margin: 5px auto;
+        width: 60%;
+        font-size: 2rem;
+    }
+}
+
+/* Media for small laptop/monitor */
+@media (max-width: 1024px) {
+    #gameBoard {
+        width: 90%;
+        height: 60%;
+        background: #111111;
+        display: block;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    #scoreText {
+        margin: 5px auto;
+        width: 60%;
+        font-size: 2rem;
+    }
+}

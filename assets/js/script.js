@@ -3,6 +3,9 @@ const gameBoard = document.querySelector("#gameBoard");
 const ctx = gameBoard.getContext("2d");
 const scoreText = document.querySelector("#scoreText");
 const resetBtn = document.querySelector("#resetBtn");
+const mainGame = document.getElementById("mainGame");
+const rules = document.getElementById("rules");
+const hideBtn = document.getElementById("hideBtn");
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
 const paddle1Color = "blue";
@@ -13,6 +16,7 @@ const ballRadius = 3;
 const ballColor = "white";
 const ballBorderColor = "white";
 const boardBackground = "black";
+
 
 let intervalID;
 let ballX = gameWidth / 2;
