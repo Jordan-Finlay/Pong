@@ -233,6 +233,7 @@ function resetGame() {
 function runGame() {
     mainGame.classList.remove("none");
     rules.classList.add("none");
+    hideBtn.classList.add("none");
     setTimeout(ballStart, 2500); //Timer to keep the ball in place after starting game
     clearInterval(intervalID);
     gameStart();
