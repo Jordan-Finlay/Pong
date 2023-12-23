@@ -4,6 +4,10 @@ body {
     text-align: center;
 }
 
+h1 {
+    color: white;
+}
+
 .fa-solid {
     margin-right: 15px;
 }
@@ -28,9 +32,9 @@ body {
     font-size: 300%;
 }
 
-#rules {}
-
-.logo {}
+#rules {
+    color: white;
+}
 
 #scoreText {
     margin: 5px auto;
