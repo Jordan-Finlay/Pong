@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,18 +18,17 @@
       rel="stylesheet"
     />
 
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="assets/images/icons8-pong-60.png"
     />
-
     <script
       src="https://kit.fontawesome.com/3b20d96fa9.js"
       crossorigin="anonymous"
     ></script>
-
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Pong</title>
   </head>
@@ -37,9 +37,11 @@
       <h1 id="heading">
         <i class="fa-solid fa-table-tennis-paddle-ball"></i>PONG
       </h1>
+      <!-- Button to start game -->
       <div id="hideBtn">
         <button id="runGame">Click here when ready to start!</button>
       </div>
+      <!-- Rules for game -->
       <div id="rules">
         <h2>Rules</h2>
         <ul class="list">
@@ -49,14 +51,16 @@
           <li>Press reset to reset game</li>
         </ul>
       </div>
+      <!-- General layout and style of game and canvas -->
       <div id="mainGame" class="none">
         <canvas id="gameBoard"></canvas>
-
+        <!-- Scoreboard -->
         <div id="scoreText">0 : 0</div>
-
+        <!-- Reset -->
         <button id="resetBtn" n>Reset</button>
       </div>
     </main>
+    <!-- Script link to JS -->
     <script src="assets/js/script.js"></script>
   </body>
 </html>
