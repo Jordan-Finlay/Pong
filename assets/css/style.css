@@ -49,6 +49,10 @@ h1 {
     font-size: 20px;
 }
 
+.list{
+    list-style-type: none;
+}
+
 /* Media for mobile screens */
 @media (max-width: 440px) {
     #gameBoard {
