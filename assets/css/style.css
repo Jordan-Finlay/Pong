@@ -1,17 +1,28 @@
+/* Main body and general alignment/style */
 body {
     background-color: rgb(85, 107, 180);
     font-family: "Raleway", sans-serif;
     text-align: center;
 }
 
+/* Header */
 h1 {
     color: white;
 }
 
+/* Pong logo */
 .fa-solid {
     margin-right: 15px;
 }
 
+/* Align pong logo/h1 */
+#heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-size: 300%;
+}
+
+/* Canvas */
 #gameBoard {
     width: 1200px;
     height: 650px;
@@ -22,35 +33,34 @@ h1 {
     border: 5px;
 }
 
+/* To toggle start button/rules */
 .none {
     display: none !important;
 }
 
-#heading {
-    text-align: center;
-    font-size: 2.5rem;
-    font-size: 300%;
-}
-
+/* Rules */
 #rules {
     color: white;
 }
 
+/* Hide list bullet points */
+.list {
+    list-style-type: none;
+}
+
+/* Scoreboard */
 #scoreText {
     margin: 5px auto;
     width: 60%;
     font-size: 3rem;
 }
 
+/* Reset */
 #resetBtn {
     width: 100px;
     height: 50px;
     border-radius: 10px;
     font-size: 20px;
-}
-
-.list{
-    list-style-type: none;
 }
 
 /* Media for mobile screens */
