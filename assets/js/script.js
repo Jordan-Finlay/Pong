@@ -169,39 +169,43 @@ function checkCollision() {
 
 //To move paddles up and down
 function changeDirection(event) {
-    const keyPressed = event.keyCode;
-    const paddle1Up = 87;
-    const paddle1Down = 83;
-    const paddle2Up = 79;
-    const paddle2Down = 76;
+    try {
+        const keyPressed = event.keyCode;
+        const paddle1Up = 87;
+        const paddle1Down = 83;
+        const paddle2Up = 79;
+        const paddle2Down = 76;
 
-    //Paddle 1 up
-    switch (keyPressed) {
-        case (paddle1Up):
-            if (paddle1.y > 5) {
-                paddle1.y -= paddleSpeed;
-            }
-            break;
-        //Paddle 1 Down
-        case (paddle1Down):
-            if (paddle1.y < 120) {
-                paddle1.y += paddleSpeed;
-            }
-            break;
-    }
-    //Paddle 2 up
-    switch (keyPressed) {
-        case (paddle2Up):
-            if (paddle2.y > 5) {
-                paddle2.y -= paddleSpeed;
-            }
-            break;
-        //Paddle 2 Down
-        case (paddle2Down):
-            if (paddle2.y < 120) {
-                paddle2.y += paddleSpeed;
-            }
-            break;
+        //Paddle 1 up
+        switch (keyPressed) {
+            case (paddle1Up):
+                if (paddle1.y > 5) {
+                    paddle1.y -= paddleSpeed;
+                }
+                break;
+            //Paddle 1 Down
+            case (paddle1Down):
+                if (paddle1.y < 120) {
+                    paddle1.y += paddleSpeed;
+                }
+                break;
+        }
+        //Paddle 2 up
+        switch (keyPressed) {
+            case (paddle2Up):
+                if (paddle2.y > 5) {
+                    paddle2.y -= paddleSpeed;
+                }
+                break;
+            //Paddle 2 Down
+            case (paddle2Down):
+                if (paddle2.y < 120) {
+                    paddle2.y += paddleSpeed;
+                }
+                break;
+        }
+    } catch (err) {
+        alert(err.message);
     }
 }
 
