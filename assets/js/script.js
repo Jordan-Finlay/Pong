@@ -52,7 +52,7 @@ resetBtn.addEventListener("click", resetGame);
 function gameStart() {
     createBall();
     nextTick();
-};
+}
 
 //Main loop
 function nextTick() {
@@ -68,14 +68,14 @@ function nextTick() {
     } catch (err) {
         alert(err.message);
     }
-};
+}
 
 
 //General background for gameboard
 function clearBoard() {
     ctx.fillStyle = boardBackground;
     ctx.fillRect(0, 0, gameWidth, gameHeight);
-};
+}
 
 //Style for the ball
 function drawBall(ballX, ballY) {
@@ -86,7 +86,7 @@ function drawBall(ballX, ballY) {
     ctx.arc(ballX, ballY, ballRadius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
-};
+}
 
 //Math round to randomise if the ball goes right of left when spawned
 function createBall() {
@@ -103,12 +103,12 @@ function createBall() {
     ballX = gameWidth / 2;
     ballY = gameHeight / 2;
     drawBall(ballX, ballY);
-};
+}
 
 function moveBall() {
     ballX += (ballSpeed * ballXDirection);
     ballY += (ballSpeed * ballYDirection);
-};
+}
 
 //Display for paddles
 function drawPaddles() {
@@ -123,8 +123,7 @@ function drawPaddles() {
     ctx.strokeRect(paddle2.x, paddle2.y, paddle2.height, paddle2.width);
     ctx.fillStyle = paddle2Color;
     ctx.fillRect(paddle2.x, paddle2.y, paddle2.height, paddle2.width);
-
-};
+}
 
 //To make sure ball bounces off walls/paddles
 function checkCollision() {
@@ -166,7 +165,7 @@ function checkCollision() {
             ballSpeed += 0.1;
         }
     }
-};
+}
 
 //To move paddles up and down
 function changeDirection(event) {
@@ -204,13 +203,13 @@ function changeDirection(event) {
             }
             break;
     }
-};
+}
 
 //Update score board
 function updateScore() {
     scoreText.textContent = `${player1Score} : ${player2Score}`;
     ballStart();
-};
+}
 
 //Reset game
 function resetGame() {
@@ -231,7 +230,7 @@ function resetGame() {
     updateScore();
     clearInterval(intervalID);
     runGame();
-};
+}
 
 //Removes rules page. Adds canvas to be displayed
 function runGame() {
@@ -241,7 +240,7 @@ function runGame() {
     setTimeout(ballStart, 2500); //Timer to keep the ball in place after starting game
     clearInterval(intervalID);
     gameStart();
-};
+}
 
 //Listener for when you click to start the game 
 addEventListener("DOMContentLoaded", (event) => {
@@ -252,4 +251,4 @@ addEventListener("DOMContentLoaded", (event) => {
 //Added to start the ball movement after the setTimeout when running game
 function ballStart() {
     ballSpeed = 1;
-};
+}
