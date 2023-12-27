@@ -1,39 +1,45 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<div align="center"><img src="assets/readme/logo.jpg" alt="An image of my Pong and its logo"></div>
 
-Welcome,
+<div align="center"><img src="assets/readme/allscreens.jpg" alt="A picture of my pong game on multiple screen devices"></div>
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# UX
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+I've created a game of Pong.
+Pong was created back in the 29th of November 1972.
+This is my first Javascript project I've made and wanted to make Pong as a credit for my dad. We used to play it a lot when I was young and built our own Pong game years ago.
+The game is simple but fun.
+I created it for users to jump in and out easily and solely to enjoy themself with this amazing classic game.
+I kept the design simple with a basic background with no images to distract the user and keep them engaged with the game, aswell as keeping the original colors for the canvas and ball. I changed and updated the paddles for a more modern classic of red vs blue.
+I created a "start menu" so the user isn't rushed into the game and can read the rules fairly before starting. Even when starting the game I've implemented a time delay for two and a half seconds before the ball starts moving to again not rush the user.
+Theres a scoreboard to keep track of the score aswell as a reset button if the user would like to start from the top.
 
-## Codeanywhere Reminders
+<div align="center"><img src="assets/readme/wholegame.jpg" alt="An image of my Pong game"></div>
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+# Features
 
-`python3 -m http.server`
+__Existing Features__
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- A fully functioning and correctly working game of Pong.
+- A basic background with no images to distract the user.
+- A classic black canvas with a white ball - as a nod to the classic Atari Pong.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+- A start menu before starting the game to give the user time to read the rules. I thought this would be a great way for the user not to be rushed into forcing playing the game without knowing the controls and would ultimately lead to a bad user experience. The game runs at the users pace and they're allowed to start when ready.
 
-`http_server`
+<div align="center"><img src="assets/readme/startmenu.jpg" alt="An image of my load up start menu"></div>
+<br />
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- A timer delay after clicking start. For two and a half seconds when entering the game the ball is frozen and will not move - just to allow the user to brace themselves before beginning.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+<div align="center"><img src="assets/readme/ballfreeze.jpg" alt="An image of the ball paused"></div>
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- A more modern variation of red vs blue paddle design
 
-To log into the Heroku toolbelt CLI:
+<div align="center"><img src="assets/readme/bluepaddle.jpg" alt="An image of the blue paddle"></div>
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- A scoreboard to keep track of score
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+<div align="center"><img src="assets/readme/scoreboard.jpg" alt="An image of the scoreboard"></div>
 
----
+- A reset button for users to start from the top
 
-Happy coding!
+<div align="center"><img src="assets/readme/reset.jpg" alt="An image of the reset button"></div>
