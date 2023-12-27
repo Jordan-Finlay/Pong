@@ -31,10 +31,16 @@ __Existing Features__
 - A timer delay after clicking start. For two and a half seconds when entering the game the ball is frozen and will not move - just to allow the user to brace themselves before beginning.
 
 <div align="center"><img src="assets/readme/ballfreeze.jpg" alt="An image of the ball paused"></div>
+<br />
 
 - A more modern variation of red vs blue paddle design
+such as;
+Blue paddle
 
 <div align="center"><img src="assets/readme/bluepaddle.jpg" alt="An image of the blue paddle"></div>
+
+Red paddle
+<div align="center"><img src="assets/readme/redpaddle.jpg" alt="An image of the red paddle"></div>
 
 - A scoreboard to keep track of score
 
@@ -43,3 +49,92 @@ __Existing Features__
 - A reset button for users to start from the top
 
 <div align="center"><img src="assets/readme/reset.jpg" alt="An image of the reset button"></div>
+
+# Features Left to Implement
+
+I have plenty of ideas I would love to add to this project such as;
+
+- A difficulty selector (easy, medium, hard).
+- A background selector. So the user can swap background or paddle colors to whatever they'd like.
+- Add the ability for the user to change paddle sizes or ball sizes (for general fun).
+- Add a pause to the reset button before the ball starts again.
+- An AI/bot function for a single player game
+- Lastly, I'd like to add a "challenge game" which introduces a "life" system. Where you have 3 lives and the ai/bot is set to extremely easy with 3 lives himself. When you score 3 times and beat the computer the background changes, the ball speed ever so slightly increases and the ai/bot gets smarter and predicts the ball better. There would be maybe 5 stages of ai opponents to beat to complete the challenge with the last stage being incredibly hard to score. You'd have three lives and if the computer takes them all the game stops and the user loses.
+
+# Testing
+
+I've tested my Pong game website on multiple browers such as Firefox/Chrome and Microsoft edge. As well as my android phone using "Samsung internet".
+To my current knowledge there are no bugs on any device or internet browser - although I'm still yet to test fully on an ipad/tablet.
+The website is fully adaptable to all devices and screen sizes.
+I believe any of my website consumers will be happy and have a great experience and enjoy playing my game of Pong.
+
+- Firefox
+  - Mainpage - Works as intended
+  - Eventspage - Works as intended
+  - gallerypage - Works as intended
+  - signup page - Works as intended
+
+- Chrome
+  - Mainpage - Works as intended
+  - Eventspage - Works as intended
+  - gallerypage - Works as intended
+  - signup page - Works as intended
+
+- Microsoft edge
+  - Mainpage - Works as intended
+  - Eventspage - Works as intended
+  - gallerypage - Works as intended
+  - signup page - Works as intended
+
+## Mobile testing
+
+- Firefox (mobile)
+  - Mainpage - Works as intended
+  - Eventspage - Works as intended
+  - gallerypage - Works as intended
+  - signup page - Works as intended
+
+- Chrome (mobile)
+  - Mainpage - Works as intended
+  - Eventspage - Works as intended
+  - gallerypage - Works as intended
+  - signup page - Works as intended
+
+- Microsoft edge (mobile)
+  - Mainpage - Works as intended
+  - Eventspage - Works as intended
+  - gallerypage - Works as intended
+  - signup page - Works as intended
+
+# Validator Testing
+
+- HTML
+No errors were returned when passing through the official W3C validator -
+<https://validator.w3.org/nu/?doc=https%3A%2F%2Fjordan-finlay.github.io%2FPong%2F>
+
+- CSS
+No errors were found when passing through the official (Jigsaw) validator -
+<https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjordan-finlay.github.io%2FPong%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en>
+
+- Lighthouse
+No errors were found when using ligthouse -
+<https://pagespeed.web.dev/analysis/https-jordan-finlay-github-io-Pong/zvka6wjtqb?form_factor=mobile>
+<https://pagespeed.web.dev/analysis/https-jordan-finlay-github-io-Pong/zvka6wjtqb?form_factor=desktop>
+
+I am currently using "Prettier" so the W3C validator complains with trailing slashes that have "no effect".
+I can remove the slashes myself but whenever I save or format my code prettier will add them back in.
+
+<div align="center"><img src="assets/readme/prettier.jpg"></div>
+
+# Bugs
+
+I've had quite a few bugs whilst creating the game.
+Two major bugs I had (admittedly were hilarious but simultaneously infuriating) where;
+
+- Firstly a bug when moving the paddle up/down would create a new paddle entirely. I found and fixed the bug and is now working correctly as intended.
+
+<div align="center"><img src="assets/readme/drawpaddlebug.jpg"></div>
+
+- Secondly I had a similar bug with the ball. It would create multiple balls drawn in a line. I found and fixed this bug too and is now working correctly as intended.
+
+<div align="center"><img src="assets/readme/drawballbug.jpg"></div>
