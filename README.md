@@ -120,6 +120,10 @@ No errors were found when using ligthouse -
 <https://pagespeed.web.dev/analysis/https-jordan-finlay-github-io-Pong/zvka6wjtqb?form_factor=mobile>
 <https://pagespeed.web.dev/analysis/https-jordan-finlay-github-io-Pong/zvka6wjtqb?form_factor=desktop>
 
+- JShint
+No errors were found when running my js code through jshint - 
+<https://jshint.com/>
+
 I am currently using "Prettier" so the W3C validator complains with trailing slashes that have "no effect".
 I can remove the slashes myself but whenever I save or format my code prettier will add them back in.
 
