@@ -6,13 +6,13 @@
 # UX
 
 I've created a game of Pong.
-Pong was created back in the 29th of November 1972.
+Pong was created by Atari back on the 29th of November 1972.
 This is my first Javascript project I've made and wanted to make Pong as a credit for my dad. We used to play it a lot when I was young and built our own Pong game years ago.
 The game is simple but fun. 
-I created it for users to jump in and out easily and solely to enjoy themself with this amazing classic game.
-I kept the design simple with a basic background with no images to distract the user and keep them engaged with the game, aswell as keeping the original colors for the canvas and ball. I changed and updated the paddles for a more modern classic of red vs blue.
+I created it for users to jump in and out easily and solely to enjoy themselves with this amazing classic game.
+I kept the design simple with a basic background with no images to distract the user and keep them engaged with the game, as well as keeping the original colors for the canvas and ball. I changed and updated the paddles for a more modern classic of red vs blue.
 I created a "start menu" so the user isn't rushed into the game and can read the rules fairly before starting. Even when starting the game I've implemented a time delay for two and a half seconds before the ball starts moving to again not rush the user.
-Theres a scoreboard to keep track of the score aswell as a reset button if the user would like to start from the top.
+Theres a scoreboard to keep track of the score as well as a reset button if the user would like to start from the top.
 
 
 <div align="center"><img src="assets/readme/wholegame.jpg" alt="An image of my Pong game"></div>
@@ -26,7 +26,7 @@ __Existing Features__
 - A basic background with no images to distract the user.
 - A classic black canvas with a white ball - as a nod to the classic Atari Pong.
 
-- A start menu before starting the game to give the user time to read the rules. I thought this would be a great way for the user not to be rushed into forcing playing the game without knowing the controls and would ultimately lead to a bad user experience. The game runs at the users pace and they're allowed to start when ready. 
+- A start menu before starting the game to give the user time to read the rules. I thought this would be a great way for the user to not be rushed into playing the game without knowing the controls and would ultimately lead to a bad user experience. The game runs at the users' pace and they're allowed to start when ready. 
 <div align="center"><img src="assets/readme/startmenu.jpg" alt="An image of my load up start menu"></div>
 <br />
 
@@ -53,11 +53,11 @@ Red paddle
 
 I have plenty of ideas I would love to add to this project such as;
 
+- An AI/bot function for a single player game.
 - A difficulty selector (easy, medium, hard).
 - A background selector. So the user can swap background or paddle colors to whatever they'd like.
 - Add the ability for the user to change paddle sizes or ball sizes (for general fun).
 - Add a pause to the reset button before the ball starts again.
-- An AI/bot function for a single player game
 - Lastly, I'd like to add a "challenge game" which introduces a "life" system. Where you have 3 lives and the ai/bot is set to extremely easy with 3 lives himself. When you score 3 times and beat the computer the background changes, the ball speed ever so slightly increases and the ai/bot gets smarter and predicts the ball better. There would be maybe 5 stages of ai opponents to beat to complete the challenge with the last stage being incredibly hard to score. You'd have three lives and if the computer takes them all the game stops and the user loses.
 
 # Testing
